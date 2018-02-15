@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Sahil Kapur">
+
+        <link rel="stylesheet" href="CSS/bootstrap.css">
+    	<link rel="stylesheet" href="CSS/organize.css">
+		<link rel="stylesheet" href="CSS/font.css">
+
+		<!--<script src="js/bootstrap.js"></script>-->
+
+        <title>GarageSensor</title>
+
+        <script>
+	        function checkWidth() {
+                var width = window.innerWidth;
+                if (width < 450) {
+                    document.getElementById("distance").style.fontSize = "40px";
+                    document.getElementById("stat").style.fontSize = "20px";
+                }
+                else if (width > 900) {
+                    document.getElementById("distance").style.fontSize = "65px";
+                    document.getElementById("stat").style.fontSize = "30px";
+                }
+                else {
+                    document.getElementById("distance").style.fontSize = "10vw";
+                    document.getElementById("stat").style.fontSize = "3vw";
+                }
+            }
+        </script>
+	</head>
+
+	<body onload="checkWidth()">
+		<img src="Images/background.png" class="background">
+        <p class="title text-center" id="header">Garage<b class="accent">Sensor</b></p>
+        <p id="distance" width="50%" class="text-center dist">70 cm</p>
+        <!--<table id="table" class="center" width="80%" display="none">
+            <tr>
+                <td id="distance" width="50%" class="text-center dist">--</td>
+                <td id="stat" width="50%" class="text-center status">--</td>
+            </tr>
+        </table>-->
+
+        <hr class="hr">
+        <!--<div id="wait" class="loading">
+            <img src="Images/loading.gif" class="wait-gif" id="wait">
+            <h5 class="text-center">Loading...</h5>
+        </div>-->
+        <div class="container-fluid">
+        	<img src="Images/open.png" class="status-img">
+        </div>
+
+        <p class="update-time" id="last-update">--</p>
+        <p class="update-time" id="code">--</p>
+        <button class="btn btn-info padding-btn" onclick="setup()">Settings</button>
+
+	</body>
+</html>
